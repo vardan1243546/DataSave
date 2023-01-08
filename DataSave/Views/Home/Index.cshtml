@@ -1,0 +1,25 @@
+﻿@model IEnumerable<DataSave.Models.User>
+@{
+    ViewData["Title"] = "Home Page";
+}
+ <table class="table table-bordered-">
+     <thead>
+         <tr>
+             <th>Email</th>
+             <th>Password</th>
+             <th>Age</th>
+         </tr>
+     </thead>
+     <thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Email</td>
+                <td>@item.Password</td>
+                <td>@item.Age</td>
+            </tr>
+            
+        }
+         <tr></tr>
+     </thead>
+ </table>
